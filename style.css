@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #ececec;
+}
+body{
+    background-color: rgb(1, 0, 34);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ececec;
+    width: 98vw;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.main-game{
+    background-color: #000;
+    border: 2px solid #ececec;
+    height: calc(100% - 10px);
+    width: 50%;
+}
+.star{
+    z-index: -1;
+    width: 4px;
+    height: 4px;
+    background-color: #ececec;
+    animation: twinkle 2s infinite alternate-reverse linear;
+    position: absolute;
+    border-radius: 3px;
+}
+@keyframes twinkle{
+    100%{opacity: 0;}
+}
+.alternate-block{
+    opacity: 0.9;
+}
+.bomb{
+    background-color: red !important;
+}
