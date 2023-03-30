@@ -75,12 +75,11 @@ function getBlockDigits() {
     nonBombBlocks.forEach(e => {
         blockIndex = e.getAttribute('data-sno')
         nearbyBlocks = getNearbyBlocks(blockIndex);
-        blockNum = 0;
+        var blockNum = 0;
         nearbyBlocks.forEach(h => {
-            if (h) {
-                h_classList = Array.from(h.classList);
-                if (h_classList.includes('bomb')) {
-                    blockNum++;
+            if (!!h) {
+                if (h.classList.contains('bomb')) {
+                    blockNum = blockNum+1;
                 }
             }
         })
