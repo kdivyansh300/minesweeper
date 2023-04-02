@@ -42,5 +42,28 @@ body{
     opacity: 0.9;
 }
 .bomb{
-    background-color: red !important;
+    background-color: #ff8600 !important;
+    background: #ff8600 url('bomb.png') no-repeat center center;
+    background-size: contain;
+}
+div[data-sno]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+div[data-val]{
+    color: #3b3b3b;
+}
+div[data-val="1"]{
+    color: #1976d2;
+}
+div[data-val="2"]{
+    color: #4c9246;
+}
+div[data-val="3"]{
+    color: #d53d3b;
+}
+div[data-val="4"]{
+    color: #7c1ca4;
 }
