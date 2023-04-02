@@ -90,7 +90,10 @@ function getBlockDigits() {
 
 function showDigits() {
     nonBombBlocks.forEach(e => {
-        e.innerText = e.getAttribute('data-val')
+        elemValue = e.getAttribute('data-val');
+        if (elemValue!="0") {
+            e.innerText = elemValue;            
+        }
     });
 }
 
