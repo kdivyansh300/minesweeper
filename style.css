@@ -45,6 +45,8 @@ body{
     background-color: #ff8600 !important;
     background: #ff8600 url('bomb.png') no-repeat center center;
     background-size: contain;
+    border: 5px solid #ff8600;
+    box-sizing: border-box;
 }
 div[data-sno]{
     display: flex;
