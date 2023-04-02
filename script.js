@@ -73,10 +73,10 @@ function getNearbyBlocks(block){
 function getBlockDigits() {
     nonBombBlocks = document.querySelector('.main-game').querySelectorAll('div:not(.bomb)')
     nonBombBlocks.forEach(e => {
-        blockIndex = e.getAttribute('data-sno')
-        nearbyBlocks = parseInt(getNearbyBlocks(blockIndex));
+        blockIndex = parseInt(e.getAttribute('data-sno'));
+        nBlocks = getNearbyBlocks(blockIndex);
         blockNum = 0;
-        nearbyBlocks.forEach(h => {
+        nBlocks.forEach(h => {
             if (!!h) {
                 if (h.classList.contains('bomb')) {
                     blockNum++;
