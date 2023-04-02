@@ -8,6 +8,7 @@ grid-row-gap: 0px;
 
 .main-game > div{
     background-color: #e5c29f;
+    user-select: none;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
