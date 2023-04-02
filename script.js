@@ -1,5 +1,5 @@
 
-let bombBlocks = [], numberOfBlocks = 100, nonBombBlocks;
+let bombBlocks = [], numberOfBlocks = 100, nonBombBlocks, blockNum;
 
 getDiv = (value) => document.querySelector(`.div${value}`);
 
@@ -74,12 +74,12 @@ function getBlockDigits() {
     nonBombBlocks = document.querySelector('.main-game').querySelectorAll('div:not(.bomb)')
     nonBombBlocks.forEach(e => {
         blockIndex = e.getAttribute('data-sno')
-        nearbyBlocks = getNearbyBlocks(blockIndex);
-        var blockNum = 0;
+        nearbyBlocks = parseInt(getNearbyBlocks(blockIndex));
+        blockNum = 0;
         nearbyBlocks.forEach(h => {
             if (!!h) {
                 if (h.classList.contains('bomb')) {
-                    blockNum = blockNum+1;
+                    blockNum++;
                 }
             }
         })
